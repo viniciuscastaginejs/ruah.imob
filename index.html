@@ -3,1576 +3,482 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proposta Comercial — MLX Mind × Ruah Imobiliária</title>
+<title>Auaufood — Delivery e Pet Shop para o seu pet | Ribeirão Preto</title>
+<meta name="description" content="Auaufood — Nutrição e delivery para o seu pet em Ribeirão Preto. Banho, tosa, ração, petiscos e acessórios entregues na porta da sua casa.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --purple-deep: #1a0a2e;
-    --purple-dark: #2d1054;
-    --purple-mid: #4a1f8c;
-    --purple-vibrant: #7b2ff7;
-    --purple-bright: #9b4dff;
-    --purple-glow: #c084fc;
-    --purple-soft: #e9d5ff;
-    --gold: #d4af6a;
-    --gold-light: #f0d08a;
-    --white: #ffffff;
-    --off-white: #f8f6ff;
-    --text-light: rgba(255,255,255,0.85);
-    --text-muted: rgba(255,255,255,0.55);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { font-size: 16px; scroll-behavior: smooth; }
-
-  body {
-    background: var(--purple-deep);
-    color: var(--white);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  /* ─── UTILITIES ─── */
-  .page { 
-    width: 210mm; 
-    min-height: 297mm; 
-    margin: 0 auto 2mm; 
-    position: relative; 
-    overflow: hidden;
-    page-break-after: always;
-  }
-
-  .gradient-text {
-    background: linear-gradient(135deg, var(--purple-glow), var(--white), var(--gold-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .gold-text {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* ─── ORBS / GLOWS ─── */
-  .orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    pointer-events: none;
-  }
-
-  /* ══════════════════════════════════════
-     PAGE 1 — CAPA
-  ══════════════════════════════════════ */
-  #capa {
-    background: var(--purple-deep);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0;
-  }
-
-  #capa .orb-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(123,47,247,0.5), transparent 70%); top: -100px; right: -100px; }
-  #capa .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(74,31,140,0.6), transparent 70%); bottom: 50px; left: -80px; }
-  #capa .orb-3 { width: 200px; height: 200px; background: radial-gradient(circle, rgba(212,175,106,0.2), transparent 70%); bottom: 200px; right: 100px; }
-
-  .capa-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 44px;
-    border-bottom: 1px solid rgba(155,77,255,0.2);
-    position: relative;
-    z-index: 2;
-  }
-
-  .logo-badge {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-
-  .mlx-bars-logo {
-    width: 52px;
-    height: 42px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transform: skewX(-18deg);
-    filter: drop-shadow(0 0 14px rgba(155,77,255,0.45));
-  }
-
-  .mlx-bars-logo span {
-    display: block;
-    height: 10px;
-    border-radius: 2px;
-    background: linear-gradient(135deg, #c026ff 0%, #7b2ff7 55%, #9b4dff 100%);
-    box-shadow: inset 0 0 1px rgba(255,255,255,0.4), 0 0 16px rgba(155,77,255,0.35);
-  }
-
-  .logo-icon {
-    width: 36px; height: 36px;
-    background: linear-gradient(135deg, var(--purple-vibrant), var(--purple-bright));
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 14px;
-    color: white;
-    letter-spacing: -0.5px;
-  }
-
-  .logo-name {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-  }
-
-  .capa-badge {
-    font-family: 'Syne', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--purple-glow);
-    border: 1px solid rgba(192,132,252,0.3);
-    padding: 6px 14px;
-    border-radius: 20px;
-    background: rgba(123,47,247,0.1);
-  }
-
-  .capa-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 44px 44px 20px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .capa-eyebrow {
-    font-family: 'Syne', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .capa-eyebrow::before {
-    content: '';
-    width: 40px; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold));
-  }
-
-  .capa-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 64px;
-    font-weight: 300;
-    line-height: 1.05;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-  }
-
-  .capa-title strong {
-    font-weight: 700;
-    display: block;
-  }
-
-  .capa-subtitle-line {
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--purple-vibrant), var(--gold));
-    margin: 24px 0 28px;
-    border-radius: 2px;
-  }
- .capa-subtitle {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--text-light);
-    max-width: 420px;
-    line-height: 1.8;
-    letter-spacing: 0.2px;
-  }
-
-  .capa-client-block {
-    margin-top: 40px;
-    padding: 20px 28px;
-    background: rgba(123,47,247,0.12);
-    border: 1px solid rgba(123,47,247,0.3);
-    border-left: 3px solid var(--purple-vibrant);
-    border-radius: 8px;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 4px;
-    max-width: 320px;
-  }
-
-  .capa-client-label {
-    font-family: 'Syne', sans-serif;
-    font-size: 9px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--purple-glow);
-    font-weight: 600;
-  }
-
-  .capa-client-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 600;
-    color: white;
-    letter-spacing: 0.5px;
-  }
-
-  /* Building visual */
-  .capa-visual {
-    position: absolute;
-    right: 0;
-    top: 80px;
-    bottom: 0;
-    width: 280px;
-    z-index: 1;
-    overflow: hidden;
-  }
-
-  .building-svg {
-    width: 100%;
-    height: 100%;
-    opacity: 0.15;
-  }
-
-  .capa-stats {
-    display: flex;
-    gap: 32px;
-    margin-top: 44px;
-    padding-top: 32px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    position: relative;
-    z-index: 2;
-  }
-
-  .stat-item { display: flex; flex-direction: column; gap: 3px; }
-
-  .stat-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--purple-glow), var(--white));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .stat-label {
-    font-size: 10px;
-    color: var(--text-muted);
-    letter-spacing: 0.5px;
-    font-weight: 300;
-  }
-
-  .stat-divider {
-    width: 1px;
-    background: rgba(255,255,255,0.1);
-    align-self: stretch;
-  }
-
-  .capa-footer {
-    padding: 20px 44px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    position: relative;
-    z-index: 2;
-  }
-
-  .footer-brand {
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-  }
-
-  .footer-brand span { color: var(--purple-glow); }
-
-  .footer-url {
-    font-size: 11px;
-    color: var(--text-muted);
-    text-decoration: none;
-    letter-spacing: 0.5px;
-  }
-
-  /* ══════════════════════════════════════
-     SHARED PAGE STYLES
-  ══════════════════════════════════════ */
-  .inner-page {
-    background: var(--purple-deep);
-    padding: 44px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .inner-page .orb-bg {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    pointer-events: none;
-  }
-
-  .page-header-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(123,47,247,0.2);
-    position: relative;
-    z-index: 2;
-  }
-
-  .section-tag {
-    font-family: 'Syne', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--purple-glow);
-    background: rgba(123,47,247,0.15);
-    border: 1px solid rgba(123,47,247,0.3);
-    padding: 5px 12px;
-    border-radius: 20px;
-  }
-
-  .page-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 10px;
-    color: var(--text-muted);
-    letter-spacing: 1px;
-  }
-
-  .section-heading {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 8px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .section-heading strong { font-weight: 700; }
-
-  .heading-accent {
-    width: 50px; height: 2px;
-    background: linear-gradient(90deg, var(--purple-vibrant), var(--gold));
-    margin-bottom: 24px;
-    border-radius: 2px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .body-text {
-    font-size: 13px;
-    line-height: 1.8;
-    color: var(--text-light);
-    font-weight: 300;
-    position: relative;
-    z-index: 2;
-  }
-
-  /* ── Sobre a MLX ── */
-  .sobre-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 28px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .service-card {
-    padding: 16px 20px;
-    background: rgba(123,47,247,0.08);
-    border: 1px solid rgba(123,47,247,0.2);
-    border-radius: 10px;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    transition: all 0.2s;
-  }
-  .service-card:hover { border-color: rgba(123,47,247,0.5); }
-
-  .service-icon {
-    width: 32px; height: 32px; min-width: 32px;
-    background: linear-gradient(135deg, rgba(123,47,247,0.4), rgba(155,77,255,0.2));
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 14px;
-  }
-
-  .service-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 2px;
-  }
-
-  .service-desc {
-    font-size: 11px;
-    color: var(--text-muted);
-    line-height: 1.5;
-  }
-
-  .sobre-highlight {
-    margin-top: 24px;
-    padding: 20px 24px;
-    background: linear-gradient(135deg, rgba(123,47,247,0.2), rgba(212,175,106,0.08));
-    border: 1px solid rgba(212,175,106,0.25);
-    border-radius: 12px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .sobre-highlight p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: var(--off-white);
-  }
-
-  .highlight-nums {
-    display: flex;
-    gap: 28px;
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid rgba(212,175,106,0.15);
-  }
-
-  .hn-item { display: flex; flex-direction: column; gap: 2px; }
-
-  .hn-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .hn-label { font-size: 10px; color: var(--text-muted); }
-
-  /* ── Objetivo ── */
-  .objetivo-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 24px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .obj-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 18px 22px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 10px;
-    transition: all 0.2s;
-  }
-
-  .obj-item:hover { background: rgba(123,47,247,0.1); border-color: rgba(123,47,247,0.3); }
-
-  .obj-num {
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--purple-vibrant);
-    min-width: 24px;
-    letter-spacing: 1px;
-  }
-
-  .obj-content { flex: 1; }
-
-  .obj-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 3px;
-  }
-
-  .obj-text { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
-
-  .obj-icon { font-size: 20px; }
-
-  /* ── Planos ── */
-  .plans-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 28px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .plan-card {
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .plan-card.featured {
-    grid-column: 1 / -1;
-  }
-
-  .plan-inner {
-    padding: 28px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .plan-card.base .plan-inner {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .plan-card.premium .plan-inner {
-    background: linear-gradient(145deg, rgba(123,47,247,0.25), rgba(45,16,84,0.8));
-    border: 1px solid rgba(123,47,247,0.5);
-  }
-
-  .plan-badge {
-    font-family: 'Syne', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 20px;
-    display: inline-block;
-    margin-bottom: 16px;
-    width: fit-content;
-  }
-
-  .plan-card.base .plan-badge {
-    background: rgba(255,255,255,0.08);
-    color: var(--text-muted);
-  }
-
-  .plan-card.premium .plan-badge {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    color: var(--purple-deep);
-  }
-
-  .plan-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-
-  .plan-tagline {
-    font-size: 11px;
-    color: var(--text-muted);
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-
-  .plan-price {
-    margin-bottom: 24px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-
-  .plan-price-label {
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    color: rgba(255,255,255,.65);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-
-  .plan-price-value {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 48px;
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: -3px;
-  }
-
-  .plan-card.base .plan-price-value { color: white; }
-
-  .plan-card.premium .plan-price-value {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .plan-price-period {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: rgba(255,255,255,.7);
-    margin-left: 6px;
-  }
-
-  .plan-items {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-  }
-
-  .plan-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
-    color: var(--text-light);
-  }
-
-  .plan-item::before {
-    content: '';
-    width: 6px; height: 6px; min-width: 6px;
-    border-radius: 50%;
-    background: var(--purple-vibrant);
-  }
-
-  .plan-card.premium .plan-item::before {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  }
-
-  .plan-media {
-    margin-top: 20px;
-    padding: 14px 16px;
-    background: rgba(0,0,0,0.2);
-    border-radius: 8px;
-    border: 1px dashed rgba(255,255,255,0.1);
-  }
-
-  .plan-media-label {
-    font-family: 'Syne', sans-serif;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 4px;
-  }
-
-  .plan-media-value {
-    font-family: 'Syne', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--purple-glow);
-  }
-
-  /* ── Condições ── */
-  .conditions-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 28px;
-    position: relative;
-    z-index: 2;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  .conditions-table thead tr {
-    background: linear-gradient(135deg, var(--purple-vibrant), var(--purple-mid));
-  }
-
-  .conditions-table th {
-    padding: 14px 20px;
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: white;
-    text-align: left;
-  }
-
-  .conditions-table th:first-child { border-radius: 12px 0 0 0; }
-  .conditions-table th:last-child { border-radius: 0 12px 0 0; }
-
-  .conditions-table tbody tr {
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-
-  .conditions-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
-  .conditions-table tbody tr:nth-child(odd) { background: rgba(123,47,247,0.05); }
-
-  .conditions-table tbody tr:last-child td:first-child { border-radius: 0 0 0 12px; }
-  .conditions-table tbody tr:last-child td:last-child { border-radius: 0 0 12px 0; }
-
-  .conditions-table td {
-    padding: 14px 20px;
-    font-size: 13px;
-    color: var(--text-light);
-  }
-
-  .conditions-table td.plan-a {
-    font-family: 'Syne', sans-serif;
-    font-weight: 600;
-    color: var(--purple-glow);
-  }
-
-  .conditions-table td.plan-b {
-    font-family: 'Syne', sans-serif;
-    font-weight: 600;
-  }
-
-  .conditions-table td.plan-b .gold-val {
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .conditions-table td.plan-a,
-  .conditions-table td.plan-b .gold-val {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 800;
-    letter-spacing: -0.4px;
-  }
-
-  .discount-pill {
-    display: inline-block;
-    padding: 2px 8px;
-    background: rgba(123,47,247,0.2);
-    border: 1px solid rgba(123,47,247,0.4);
-    border-radius: 12px;
-    font-size: 10px;
-    font-family: 'Syne', sans-serif;
-    font-weight: 600;
-    color: var(--purple-glow);
-    margin-left: 6px;
-  }
-
-  .discount-pill.gold-pill {
-    background: rgba(212,175,106,0.15);
-    border-color: rgba(212,175,106,0.4);
-    color: var(--gold);
-  }
-
-  /* ── Pagamento ── */
-  .payment-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 24px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .payment-card {
-    padding: 22px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .payment-icon { font-size: 28px; }
-
-  .payment-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    color: white;
-  }
-
-  .payment-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
-
-  .installment-banner {
-    margin-top: 20px;
-    padding: 20px 24px;
-    background: linear-gradient(135deg, rgba(123,47,247,0.2), rgba(212,175,106,0.1));
-    border: 1px solid rgba(212,175,106,0.3);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .installment-icon { font-size: 32px; }
-
-  .installment-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
-    line-height: 1.4;
-  }
-
-  .installment-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; font-family: 'Inter', sans-serif; }
-
-  .obs-box {
-    margin-top: 24px;
-    padding: 18px 22px;
-    background: rgba(255,255,255,0.02);
-    border-left: 3px solid var(--purple-vibrant);
-    border-radius: 0 8px 8px 0;
-    position: relative;
-    z-index: 2;
-  }
-
-  .obs-label {
-    font-family: 'Syne', sans-serif;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--purple-glow);
-    margin-bottom: 6px;
-  }
-
-  .obs-text { font-size: 12px; color: var(--text-light); line-height: 1.7; }
-
-  /* ── Encerramento ── */
-  #encerramento {
-    background: var(--purple-deep);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .enc-orb-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(123,47,247,0.4), transparent 70%); top: -200px; left: -200px; }
-  .enc-orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(212,175,106,0.15), transparent 70%); bottom: -100px; right: -100px; }
-
-  .enc-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 60px 40px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .enc-eyebrow {
-    font-family: 'Syne', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .enc-eyebrow::before, .enc-eyebrow::after {
-    content: '';
-    width: 40px; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold));
-  }
-
-  .enc-eyebrow::after { transform: scaleX(-1); }
-
-  .enc-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 44px;
-    font-weight: 300;
-    line-height: 1.15;
-    max-width: 520px;
-    margin-bottom: 20px;
-  }
-
-  .enc-headline strong { font-weight: 700; }
-
-  .enc-sub {
-    font-size: 13px;
-    color: var(--text-muted);
-    max-width: 400px;
-    line-height: 1.8;
-    margin-bottom: 40px;
-  }
-
-  .enc-cta {
-    padding: 14px 36px;
-    background: linear-gradient(135deg, var(--purple-vibrant), var(--purple-bright));
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-family: 'Syne', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-bottom: 40px;
-    box-shadow: 0 8px 32px rgba(123,47,247,0.4);
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .enc-divider {
-    width: 60px; height: 1px;
-    background: rgba(255,255,255,0.1);
-    margin: 20px auto 30px;
-  }
-
-  .enc-signature {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .sig-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: white;
-  }
-
-  .sig-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--purple-glow);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
-
-  .sig-url {
-    font-size: 11px;
-    color: var(--text-muted);
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    margin-top: 4px;
-  }
-
-  .enc-footer {
-    padding: 20px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    position: relative;
-    z-index: 2;
-  }
-
-  .enc-footer-brand {
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    color: var(--text-muted);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-
-  .enc-footer-brand span { color: var(--purple-glow); }
-
-  .enc-footer-copy {
-    font-size: 10px;
-    color: rgba(255,255,255,0.2);
-  }
-
-  /* ── Geometric decorations ── */
-  .geo-line {
-    position: absolute;
-    background: linear-gradient(180deg, transparent, rgba(123,47,247,0.3), transparent);
-    width: 1px;
-    pointer-events: none;
-  }
-
-  .geo-corner {
-    position: absolute;
-    width: 40px; height: 40px;
-    pointer-events: none;
-  }
-
-  .corner-tl {
-    top: 30px; left: 30px;
-    border-top: 1px solid rgba(123,47,247,0.4);
-    border-left: 1px solid rgba(123,47,247,0.4);
-  }
-
-  .corner-br {
-    bottom: 30px; right: 30px;
-    border-bottom: 1px solid rgba(123,47,247,0.4);
-    border-right: 1px solid rgba(123,47,247,0.4);
-  }
-
-  /* print */
-  @media print {
-    body { background: #1a0a2e; }
-    .page { page-break-after: always; width: 210mm; min-height: 297mm; }
-  }
-
-  @media screen {
-    body { padding: 20px 0; }
-    .page { box-shadow: 0 20px 80px rgba(0,0,0,0.8); margin-bottom: 24px; }
-  }
+:root{
+  --cream:#FDF4E7;
+  --cream-2:#F7E8D2;
+  --paper:#FFFCF6;
+  --tang:#F2872E;
+  --tang-deep:#DE6E14;
+  --coral:#FF9E6B;
+  --teal:#1F6F6B;
+  --teal-deep:#155450;
+  --cocoa:#3B2A1D;
+  --cocoa-soft:#7A6653;
+  --line:rgba(59,42,29,.10);
+  --maxw:1160px;
+  --ease:cubic-bezier(.34,1.32,.5,1);
+  --ease-soft:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);color:var(--cocoa);
+  font-family:'Nunito',system-ui,sans-serif;font-weight:500;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,44px)}
+h1,h2,h3,.display{font-family:'Fredoka',sans-serif;font-weight:600;line-height:1.08}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-family:'Fredoka',sans-serif;font-weight:600;
+  font-size:1rem;padding:.9rem 1.6rem;border-radius:999px;cursor:pointer;border:2px solid transparent;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease-soft),background .3s,color .3s}
+.btn svg{width:19px;height:19px}
+.btn-primary{background:var(--tang);color:#fff;box-shadow:0 10px 22px -8px rgba(242,135,46,.6)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.02);background:var(--tang-deep);box-shadow:0 16px 30px -10px rgba(242,135,46,.7)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 10px 22px -8px rgba(31,111,107,.5)}
+.btn-teal:hover{transform:translateY(-3px) scale(1.02);background:var(--teal-deep)}
+.btn-ghost{background:transparent;border-color:var(--cocoa);color:var(--cocoa)}
+.btn-ghost:hover{background:var(--cocoa);color:var(--cream);transform:translateY(-3px)}
+
+/* Logo badge (SVG placeholder — troque pela logo real) */
+.logo-badge{width:48px;height:48px;flex-shrink:0;object-fit:contain}
+.logo-badge .ring-text{font-family:'Fredoka',sans-serif;font-weight:600;fill:#fff;font-size:8.6px;letter-spacing:.5px}
+
+/* Nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:1rem 0;transition:padding .4s var(--ease-soft)}
+.nav{display:flex;align-items:center;justify-content:space-between;
+  background:rgba(255,252,246,.72);backdrop-filter:blur(14px);border:1.5px solid var(--line);
+  border-radius:999px;padding:.5rem .6rem .5rem 1rem;box-shadow:0 8px 26px -14px rgba(59,42,29,.3);
+  transition:box-shadow .4s}
+header.scrolled .nav{box-shadow:0 14px 34px -14px rgba(59,42,29,.35)}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand b{font-family:'Fredoka',sans-serif;font-size:1.3rem;font-weight:700;color:var(--cocoa)}
+.brand b span{color:var(--tang)}
+.nav-links{display:flex;align-items:center;gap:1.9rem}
+.nav-links a{font-family:'Fredoka',sans-serif;font-weight:500;font-size:1rem;color:var(--cocoa);opacity:.85;transition:color .25s,opacity .25s}
+.nav-links a:hover{color:var(--tang);opacity:1}
+.nav-right{display:flex;align-items:center;gap:.8rem}
+.menu-btn{display:none;background:none;border:none;color:var(--cocoa);cursor:pointer}
+.menu-btn svg{width:28px;height:28px}
+
+/* Hero */
+.hero{position:relative;padding:150px 0 90px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(8px);opacity:.5;z-index:0}
+.blob.b1{width:420px;height:420px;background:radial-gradient(circle,#FFD9B0,transparent 70%);top:-90px;right:-80px}
+.blob.b2{width:360px;height:360px;background:radial-gradient(circle,#BFE3E0,transparent 70%);bottom:-120px;left:-100px}
+.paw{position:absolute;color:var(--tang);opacity:.14;z-index:0}
+.paw svg{width:100%;height:100%}
+.paw.p1{width:46px;height:46px;top:22%;left:8%;transform:rotate(-18deg);animation:float 6s ease-in-out infinite}
+.paw.p2{width:34px;height:34px;top:60%;left:14%;transform:rotate(12deg);color:var(--teal);animation:float 7s ease-in-out infinite .5s}
+.paw.p3{width:40px;height:40px;top:30%;right:9%;transform:rotate(20deg);animation:float 5.5s ease-in-out infinite .3s}
+.paw.p4{width:28px;height:28px;bottom:16%;right:16%;transform:rotate(-10deg);color:var(--teal);animation:float 6.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0))}50%{transform:translateY(-14px) rotate(var(--r,0))}}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,60px);align-items:center}
+.badge-pill{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1.5px solid var(--line);
+  border-radius:999px;padding:.45rem .95rem;font-family:'Fredoka',sans-serif;font-weight:500;font-size:.9rem;box-shadow:0 6px 16px -10px rgba(59,42,29,.4)}
+.badge-pill .dot{width:9px;height:9px;border-radius:50%;background:#43C463;box-shadow:0 0 0 3px rgba(67,196,99,.22);animation:blink 2s ease-in-out infinite}
+@keyframes blink{50%{opacity:.5}}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.4rem);margin:1.4rem 0 0;font-weight:700}
+.hero h1 .hl{position:relative;color:var(--tang);white-space:nowrap}
+.hero h1 .hl svg{position:absolute;left:0;bottom:-10px;width:100%;height:14px;color:var(--coral)}
+.hero p.lead{font-size:1.18rem;color:var(--cocoa-soft);max-width:30rem;margin:1.6rem 0 2.2rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem}
+.trust{display:flex;gap:1.6rem;margin-top:2.4rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.55rem;font-family:'Fredoka',sans-serif;font-weight:500;font-size:.95rem;color:var(--cocoa)}
+.trust-item svg{width:22px;height:22px;color:var(--tang)}
+
+/* Hero art card */
+.hero-art{position:relative;display:flex;justify-content:center}
+.pet-card{position:relative;width:min(400px,90%);background:var(--paper);border:2px solid var(--line);
+  border-radius:36px;padding:2.6rem 2rem;box-shadow:0 30px 60px -30px rgba(59,42,29,.5);text-align:center}
+.pet-card .big-logo{width:150px;height:150px;margin:0 auto 1.2rem}
+.pet-card h3{font-size:1.5rem;font-weight:700}
+.pet-card p{color:var(--cocoa-soft);margin-top:.3rem;font-size:.98rem}
+.pet-card .row{display:flex;gap:.6rem;justify-content:center;margin-top:1.4rem;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:.4rem;background:var(--cream-2);border-radius:999px;padding:.45rem .85rem;font-family:'Fredoka',sans-serif;font-weight:500;font-size:.85rem}
+.chip svg{width:16px;height:16px;color:var(--teal)}
+.deliver-tag{position:absolute;top:-18px;right:-14px;background:var(--teal);color:#fff;font-family:'Fredoka',sans-serif;font-weight:600;
+  padding:.6rem 1rem;border-radius:16px;font-size:.9rem;display:flex;align-items:center;gap:.4rem;box-shadow:0 12px 24px -10px rgba(31,111,107,.6);animation:wag 3s ease-in-out infinite}
+.deliver-tag svg{width:18px;height:18px}
+@keyframes wag{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+
+/* Sections */
+.sec-pad{padding:clamp(64px,9vw,110px) 0}
+.sec-head{max-width:620px;margin:0 auto clamp(40px,6vw,64px);text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:'Fredoka',sans-serif;font-weight:600;
+  color:var(--tang);text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;
+  background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:.4rem .9rem;margin-bottom:1.2rem}
+.eyebrow svg{width:16px;height:16px}
+.sec-head h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:700}
+.sec-head p{color:var(--cocoa-soft);margin-top:1rem;font-size:1.08rem}
+
+/* Serviços */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.svc{background:var(--paper);border:2px solid var(--line);border-radius:28px;padding:2rem 1.7rem;
+  transition:transform .4s var(--ease),border-color .4s,box-shadow .4s var(--ease-soft)}
+.svc:hover{transform:translateY(-8px);border-color:var(--tang);box-shadow:0 24px 44px -24px rgba(242,135,46,.5)}
+.svc-ico{width:60px;height:60px;border-radius:20px;display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem}
+.svc-ico svg{width:28px;height:28px;color:#fff}
+.svc:nth-child(1) .svc-ico{background:var(--tang)}
+.svc:nth-child(2) .svc-ico{background:var(--teal)}
+.svc:nth-child(3) .svc-ico{background:var(--coral)}
+.svc:nth-child(4) .svc-ico{background:var(--teal-deep)}
+.svc h3{font-size:1.4rem;font-weight:600}
+.svc p{color:var(--cocoa-soft);margin-top:.5rem;font-size:.96rem}
+
+/* Como funciona */
+.how{background:var(--teal);color:var(--cream);border-radius:44px;margin:0 clamp(0px,3vw,20px);position:relative;overflow:hidden}
+.how .paw-bg{position:absolute;inset:0;opacity:.06;pointer-events:none}
+.how .paw-bg svg{position:absolute;width:120px;height:120px;color:#fff}
+.how .sec-head h2,.how .sec-head p{color:var(--cream)}
+.how .eyebrow{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;position:relative;z-index:1}
+.step{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.16);border-radius:26px;padding:2rem 1.7rem}
+.step .num{font-family:'Fredoka',sans-serif;font-weight:700;font-size:2.6rem;color:var(--coral);line-height:1}
+.step .step-ico{margin:1rem 0;color:#fff}
+.step .step-ico svg{width:34px;height:34px;stroke-width:1.6}
+.step h3{font-size:1.4rem;font-weight:600}
+.step p{color:rgba(253,244,231,.82);margin-top:.4rem;font-size:.98rem}
+
+/* Diferenciais */
+.feats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.feat{display:flex;gap:1.1rem;align-items:flex-start;background:var(--paper);border:2px solid var(--line);border-radius:24px;padding:1.7rem}
+.feat-ico{width:52px;height:52px;border-radius:16px;background:var(--cream-2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.feat-ico svg{width:26px;height:26px;color:var(--tang)}
+.feat h3{font-size:1.25rem;font-weight:600}
+.feat p{color:var(--cocoa-soft);font-size:.94rem;margin-top:.3rem}
+
+/* Localização */
+.local-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:0;background:var(--paper);border:2px solid var(--line);border-radius:32px;overflow:hidden}
+.local-info{padding:clamp(30px,4vw,50px);display:flex;flex-direction:column;justify-content:center}
+.local-info h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;margin-bottom:1.5rem}
+.info-row{display:flex;gap:1rem;padding:1.1rem 0;border-top:1.5px solid var(--line)}
+.info-row:first-of-type{border-top:none}
+.info-row .ic{width:44px;height:44px;border-radius:14px;background:var(--cream-2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-row .ic svg{width:22px;height:22px;color:var(--teal)}
+.info-row .lbl{font-family:'Fredoka',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cocoa-soft)}
+.info-row .val{font-size:1.05rem;font-weight:600;color:var(--cocoa)}
+.info-row a.val:hover{color:var(--tang)}
+.local-info .btn{margin-top:1.8rem;align-self:flex-start}
+.map-wrap{min-height:440px;position:relative}
+.map-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* CTA */
+.cta{position:relative;margin:0 clamp(0px,3vw,20px);background:linear-gradient(135deg,var(--tang),var(--coral));
+  border-radius:44px;padding:clamp(50px,7vw,80px) 1.5rem;text-align:center;color:#fff;overflow:hidden}
+.cta .paw-bg svg{position:absolute;color:#fff;opacity:.12}
+.cta h2{font-size:clamp(2.1rem,5.5vw,3.4rem);font-weight:700;position:relative;z-index:1}
+.cta p{max-width:34rem;margin:1rem auto 2rem;font-size:1.12rem;opacity:.95;position:relative;z-index:1}
+.cta .btn{position:relative;z-index:1}
+.cta .btn-primary{background:#fff;color:var(--tang-deep);box-shadow:0 14px 30px -12px rgba(0,0,0,.35)}
+.cta .btn-primary:hover{background:var(--cream)}
+
+/* Footer */
+footer{background:var(--cocoa);color:var(--cream);padding:3.4rem 0 2.2rem;margin-top:clamp(50px,7vw,90px)}
+.foot-grid{display:flex;justify-content:space-between;align-items:center;gap:1.8rem;flex-wrap:wrap}
+.foot-brand{display:flex;align-items:center;gap:.7rem}
+.foot-brand b{font-family:'Fredoka',sans-serif;font-size:1.4rem;font-weight:700}
+.foot-brand b span{color:var(--tang)}
+.foot-social{display:flex;gap:.7rem}
+.foot-social a{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(253,244,231,.2);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease)}
+.foot-social a svg{width:20px;height:20px}
+.foot-social a:hover{background:var(--tang);border-color:var(--tang);transform:translateY(-3px)}
+.foot-bottom{margin-top:2.4rem;padding-top:1.7rem;border-top:1.5px solid rgba(253,244,231,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem;font-size:.9rem;color:rgba(253,244,231,.7)}
+.foot-bottom a{color:var(--tang);font-weight:700}
+
+/* WhatsApp float */
+.wa{position:fixed;bottom:22px;right:22px;z-index:60;width:60px;height:60px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.6);transition:transform .3s var(--ease)}
+.wa:hover{transform:scale(1.1)}
+.wa svg{width:30px;height:30px;color:#fff}
+.wa::after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid rgba(37,211,102,.5);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+
+/* Mobile menu */
+.mmenu{position:fixed;inset:0;z-index:55;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;opacity:0;pointer-events:none;transition:opacity .35s}
+.mmenu.open{opacity:1;pointer-events:auto}
+.mmenu a{font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.9rem;color:var(--cocoa)}
+.mmenu a:hover{color:var(--tang)}
+.mmenu .close{position:absolute;top:26px;right:26px;background:none;border:none;color:var(--cocoa);cursor:pointer}
+.mmenu .close svg{width:30px;height:30px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease-soft),transform .8s var(--ease-soft)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.09s}
+.reveal[data-d="2"]{transition-delay:.18s}
+.reveal[data-d="3"]{transition-delay:.27s}
+
+/* Responsive */
+@media(max-width:940px){
+  .nav-links,.nav-right .btn{display:none}
+  .menu-btn{display:block}
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero p.lead{margin-left:auto;margin-right:auto}
+  .hero-actions,.trust{justify-content:center}
+  .hero-art{order:-1;margin-bottom:1rem}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr}
+  .feats-grid{grid-template-columns:1fr}
+  .local-grid{grid-template-columns:1fr}
+  .map-wrap{min-height:340px;order:2}
+}
+@media(max-width:540px){
+  .svc-grid{grid-template-columns:1fr}
+  .hero{padding:130px 0 60px}
+  .foot-grid,.foot-bottom{justify-content:center;text-align:center;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
 </style>
 </head>
 <body>
 
-<!-- ════════════════════════════════════════
-     PAGE 1 — CAPA
-════════════════════════════════════════ -->
-<div class="page" id="capa" style="min-height:297mm; display:flex; flex-direction:column;">
-
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
-  <!-- Geometric corners -->
-  <div class="geo-corner corner-tl"></div>
-  <div class="geo-corner corner-br"></div>
-
-  <!-- Building illustration (subtle bg) -->
-  <div class="capa-visual">
-    <svg class="building-svg" viewBox="0 0 280 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax meet">
-      <!-- Main tower -->
-      <rect x="80" y="80" width="120" height="420" fill="none" stroke="white" stroke-width="0.8"/>
-      <!-- Windows grid -->
-      <g opacity="0.6">
-        <rect x="95" y="100" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="122" y="100" width="18" height="12" rx="1" fill="white" opacity="0.4"/>
-        <rect x="149" y="100" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="167" y="100" width="18" height="12" rx="1" fill="white" opacity="0.3"/>
-        <rect x="95" y="124" width="18" height="12" rx="1" fill="white" opacity="0.3"/>
-        <rect x="122" y="124" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="149" y="124" width="18" height="12" rx="1" fill="white" opacity="0.4"/>
-        <rect x="167" y="124" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="95" y="148" width="18" height="12" rx="1" fill="white" opacity="0.5"/>
-        <rect x="122" y="148" width="18" height="12" rx="1" fill="white" opacity="0.3"/>
-        <rect x="149" y="148" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="167" y="148" width="18" height="12" rx="1" fill="white" opacity="0.4"/>
-        <rect x="95" y="172" width="18" height="12" rx="1" fill="white" opacity="0.4"/>
-        <rect x="122" y="172" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="149" y="172" width="18" height="12" rx="1" fill="white" opacity="0.3"/>
-        <rect x="167" y="172" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="95" y="196" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="122" y="196" width="18" height="12" rx="1" fill="white" opacity="0.4"/>
-        <rect x="149" y="196" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="167" y="196" width="18" height="12" rx="1" fill="white" opacity="0.3"/>
-        <rect x="95" y="220" width="18" height="12" rx="1" fill="white" opacity="0.3"/>
-        <rect x="122" y="220" width="18" height="12" rx="1" fill="white" opacity="0.5"/>
-        <rect x="149" y="220" width="18" height="12" rx="1" fill="white" opacity="0.4"/>
-        <rect x="167" y="220" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="95" y="244" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="122" y="244" width="18" height="12" rx="1" fill="white" opacity="0.3"/>
-        <rect x="149" y="244" width="18" height="12" rx="1" fill="white" opacity="0.5"/>
-        <rect x="167" y="244" width="18" height="12" rx="1" fill="white" opacity="0.4"/>
-        <rect x="95" y="268" width="18" height="12" rx="1" fill="white" opacity="0.4"/>
-        <rect x="122" y="268" width="18" height="12" rx="1" fill="white" opacity="0.6"/>
-        <rect x="149" y="268" width="18" height="12" rx="1" fill="white" opacity="0.3"/>
-        <rect x="167" y="268" width="18" height="12" rx="1" fill="white" opacity="0.5"/>
+<!-- Logo SVG definido uma vez, reutilizado -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="auau-logo" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="49" fill="#F2872E"/>
+      <circle cx="50" cy="50" r="40" fill="#FDF4E7"/>
+      <path id="circtop" d="M50,12 a38,38 0 0,1 0,76 a38,38 0 0,1 0,-76" fill="none"/>
+      <text class="ring-text" fill="#fff" font-family="Fredoka,sans-serif" font-weight="600" font-size="8.6">
+        <textPath href="#circtop" startOffset="6%">O DELIVERY PARA SEU PET</textPath>
+      </text>
+      <g transform="translate(50,52)" fill="#1F6F6B">
+        <ellipse cx="0" cy="6" rx="12" ry="9"/>
+        <circle cx="-11" cy="-6" r="4.6"/><circle cx="11" cy="-6" r="4.6"/>
+        <circle cx="-5" cy="-12" r="4"/><circle cx="5" cy="-12" r="4"/>
       </g>
-      <!-- Side buildings -->
-      <rect x="20" y="200" width="55" height="300" fill="none" stroke="white" stroke-width="0.5" opacity="0.5"/>
-      <rect x="205" y="160" width="60" height="340" fill="none" stroke="white" stroke-width="0.5" opacity="0.5"/>
-      <!-- Ground line -->
-      <line x1="0" y1="498" x2="280" y2="498" stroke="white" stroke-width="0.5" opacity="0.3"/>
-      <!-- Spire -->
-      <line x1="140" y1="80" x2="140" y2="20" stroke="white" stroke-width="0.8" opacity="0.7"/>
-      <circle cx="140" cy="18" r="3" fill="white" opacity="0.7"/>
-    </svg>
-  </div>
+    </symbol>
+    <symbol id="pawicon" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 14c-2.5 0-4.5 1.8-4.5 4 0 1.6 1.4 2.5 3 2.5.9 0 1-.3 1.5-.3s.6.3 1.5.3c1.6 0 3-.9 3-2.5 0-2.2-2-4-4.5-4Zm-5.2-1.6c1.1-.3 1.6-1.8 1.1-3.3-.5-1.5-1.7-2.5-2.8-2.2-1.1.3-1.6 1.8-1.1 3.3.5 1.5 1.7 2.5 2.8 2.2Zm10.4 0c1.1.3 2.3-.7 2.8-2.2.5-1.5 0-3-1.1-3.3-1.1-.3-2.3.7-2.8 2.2-.5 1.5 0 3 1.1 3.3ZM9.6 6.6c1.1 0 2-1.2 2-2.8s-.9-2.8-2-2.8-2 1.2-2 2.8.9 2.8 2 2.8Zm4.8 0c1.1 0 2-1.2 2-2.8s-.9-2.8-2-2.8-2 1.2-2 2.8.9 2.8 2 2.8Z"/>
+    </symbol>
+  </defs>
+</svg>
 
-  <div class="capa-header">
-    <div class="logo-badge" aria-label="MLX Mind">
-      <div class="mlx-bars-logo" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+<!-- NAV -->
+<header id="header">
+  <div class="wrap"><div class="nav">
+    <a href="#top" class="brand"><img class="logo-badge" src="https://res.cloudinary.com/dtdomrtyp/image/upload/v1782999288/82c75cd8-8ca7-448d-bdbc-4a431a75b18e_qum62u.png" alt="Auaufood"><b>Auau<span>food</span></b></a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#como">Como funciona</a>
+      <a href="#porque">Por que nós</a>
+      <a href="#local">Onde estamos</a>
+    </nav>
+    <div class="nav-right">
+      <a href="https://wa.me/5516997744187?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener" class="btn btn-primary"><i data-lucide="shopping-bag"></i> Pedir agora</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu"><i data-lucide="menu"></i></button>
     </div>
-    <div class="capa-badge">Proposta Comercial · 2026</div>
-  </div>
+  </div></div>
+</header>
 
-  <div class="capa-content">
-    <div class="capa-eyebrow">Marketing Imobiliário de Alto Padrão</div>
-
-    <div class="capa-title">
-      Proposta<br>
-      <strong class="gradient-text">Comercial</strong>
-    </div>
-
-    <div class="capa-subtitle-line"></div>
-
-    <p class="capa-subtitle">
-      Estratégias de tráfego pago para imóveis, lançamentos e captação de clientes qualificados — com resultado previsível e mensurável.
-    </p>
-
-    <div class="capa-client-block">
-      <span class="capa-client-label">Preparada exclusivamente para</span>
-      <span class="capa-client-name">Ruah Imobiliária</span>
-    </div>
-
-    <div class="capa-stats">
-      <div class="stat-item">
-        <span class="stat-num">R$15M+</span>
-        <span class="stat-label">em VGV gerado</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num">120+</span>
-        <span class="stat-label">projetos imobiliários</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num">R$ 14</span>
-        <span class="stat-label">custo médio por lead</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num">+312%</span>
-        <span class="stat-label">ROI médio</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="capa-footer">
-    <span class="footer-brand"><span>MLX Mind</span> | Marketing Imobiliário</span>
-    <a class="footer-url" href="https://www.mlxmind.com.br">www.mlxmind.com.br</a>
-  </div>
+<div class="mmenu" id="mmenu">
+  <button class="close" id="menuClose" aria-label="Fechar menu"><i data-lucide="x"></i></button>
+  <a href="#servicos">Serviços</a>
+  <a href="#como">Como funciona</a>
+  <a href="#porque">Por que nós</a>
+  <a href="#local">Onde estamos</a>
+  <a href="https://wa.me/5516997744187" target="_blank" rel="noopener" class="btn btn-primary" style="display:inline-flex"><i data-lucide="shopping-bag"></i> Pedir no WhatsApp</a>
 </div>
 
-
-<!-- ════════════════════════════════════════
-     PAGE 2 — SOBRE A MLX MIND
-════════════════════════════════════════ -->
-<div class="page inner-page">
-  <div class="orb-bg" style="width:350px;height:350px;background:radial-gradient(circle,rgba(123,47,247,0.25),transparent 70%);top:-100px;right:-80px;"></div>
-  <div class="geo-corner corner-tl"></div>
-  <div class="geo-corner corner-br"></div>
-
-  <div class="page-header-bar">
-    <div class="section-tag">Sobre a Agência</div>
-    <span class="page-num">02 / 06</span>
-  </div>
-
-  <div class="section-heading" style="position:relative;z-index:2;">
-    Quem é a <strong class="gradient-text">MLX Mind</strong>
-  </div>
-  <div class="heading-accent"></div>
-
-  <p class="body-text" style="max-width:520px;">
-    A MLX Mind é uma agência de performance digital especializada no mercado imobiliário. Nascemos para resolver um problema real: <strong style="color:white;">transformar verba de anúncio em oportunidades concretas para corretores</strong> — com estratégia, dados e execução de alto nível.
-  </p>
-
-  <div class="sobre-grid">
-    <div class="service-card">
-      <div class="service-icon">📊</div>
-      <div>
-        <div class="service-name">Gestão Meta Ads</div>
-        <div class="service-desc">Campanhas no Facebook e Instagram com segmentação por intenção de compra e perfil do comprador.</div>
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔍</div>
-      <div>
-        <div class="service-name">Gestão Google Ads</div>
-        <div class="service-desc">Captura de demanda ativa — pessoas buscando imóveis agora. Máxima intenção de compra.</div>
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🎯</div>
-      <div>
-        <div class="service-name">Captação de Leads Qualificados</div>
-        <div class="service-desc">Estratégias de funil para atrair compradores com perfil real para os imóveis da carteira.</div>
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🚀</div>
-      <div>
-        <div class="service-name">Estratégias para Lançamentos</div>
-        <div class="service-desc">Planejamento completo: aquecimento de lista, pré-lançamento, lançamento e pós-venda.</div>
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🏢</div>
-      <div>
-        <div class="service-name">Campanhas para Imóveis Prontos</div>
-        <div class="service-desc">Anúncios específicos para unidades disponíveis, com criativos focados em conversão rápida.</div>
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">⚡</div>
-      <div>
-        <div class="service-name">Landing Pages & Automações</div>
-        <div class="service-desc">Páginas de alta conversão (18%+ de média) e automações para atendimento ágil no WhatsApp.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sobre-highlight">
-    <p>"Nossa missão é gerar oportunidades reais para os corretores da <strong>Ruah Imobiliária</strong> e aumentar o volume de negócios de forma previsível e escalável."</p>
-    <div class="highlight-nums">
-      <div class="hn-item">
-        <span class="hn-num">R$15M+</span>
-        <span class="hn-label">VGV gerado</span>
-      </div>
-      <div class="hn-item">
-        <span class="hn-num">120+</span>
-        <span class="hn-label">Projetos imob.</span>
-      </div>
-      <div class="hn-item">
-        <span class="hn-num">98%</span>
-        <span class="hn-label">Retenção de clientes</span>
-      </div>
-      <div class="hn-item">
-        <span class="hn-num">2+ anos</span>
-        <span class="hn-label">Especialidade imobiliária</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ════════════════════════════════════════
-     PAGE 3 — OBJETIVO DA PARCERIA
-════════════════════════════════════════ -->
-<div class="page inner-page">
-  <div class="orb-bg" style="width:400px;height:400px;background:radial-gradient(circle,rgba(212,175,106,0.1),transparent 70%);bottom:-100px;left:-100px;"></div>
-  <div class="geo-corner corner-tl"></div>
-  <div class="geo-corner corner-br"></div>
-
-  <div class="page-header-bar">
-    <div class="section-tag">Objetivo da Parceria</div>
-    <span class="page-num">03 / 06</span>
-  </div>
-
-  <div class="section-heading" style="position:relative;z-index:2;">
-    O que vamos <strong class="gradient-text">construir juntos</strong>
-  </div>
-  <div class="heading-accent"></div>
-
-  <p class="body-text" style="max-width:500px;">
-    A parceria MLX Mind × Ruah Imobiliária tem um objetivo central: <strong style="color:white;">criar uma máquina de geração de demanda previsível</strong> para a sua equipe comercial — eliminando a dependência de indicações e portais tradicionais.
-  </p>
-
-  <div class="objetivo-list">
-    <div class="obj-item">
-      <span class="obj-num">01</span>
-      <div class="obj-content">
-        <div class="obj-title">Demanda constante para os corretores</div>
-        <div class="obj-text">Fluxo contínuo de leads qualificados chegando no WhatsApp da equipe, todos os dias da semana, independente de sazonalidade.</div>
-      </div>
-      <span class="obj-icon">📥</span>
-    </div>
-    <div class="obj-item">
-      <span class="obj-num">02</span>
-      <div class="obj-content">
-        <div class="obj-title">Mais oportunidades comerciais</div>
-        <div class="obj-text">Ampliar o volume de negócios com campanhas segmentadas por perfil de comprador, faixa de renda e interesse no imóvel ideal.</div>
-      </div>
-      <span class="obj-icon">📈</span>
-    </div>
-    <div class="obj-item">
-      <span class="obj-num">03</span>
-      <div class="obj-content">
-        <div class="obj-title">Compradores qualificados e aquecidos</div>
-        <div class="obj-text">Leads que chegam já informados sobre o imóvel, com intenção real de compra — reduzindo ciclo de venda e aumentando taxa de conversão.</div>
-      </div>
-      <span class="obj-icon">🎯</span>
-    </div>
-    <div class="obj-item">
-      <span class="obj-num">04</span>
-      <div class="obj-content">
-        <div class="obj-title">Presença digital sólida no mercado de alto padrão</div>
-        <div class="obj-text">Posicionamento estratégico da Ruah como referência no segmento premium, fortalecendo marca e autoridade digital.</div>
-      </div>
-      <span class="obj-icon">🏆</span>
-    </div>
-    <div class="obj-item">
-      <span class="obj-num">05</span>
-      <div class="obj-content">
-        <div class="obj-title">Campanhas específicas para alto padrão e lançamentos</div>
-        <div class="obj-text">Criativos e estratégias desenhados para o perfil do comprador de imóveis premium — comunicação sofisticada e segmentação precisa.</div>
-      </div>
-      <span class="obj-icon">💎</span>
-    </div>
-  </div>
-</div>
-
-
-<!-- ════════════════════════════════════════
-     PAGE 4 — PLANOS
-════════════════════════════════════════ -->
-<div class="page inner-page">
-  <div class="orb-bg" style="width:500px;height:400px;background:radial-gradient(circle,rgba(123,47,247,0.2),transparent 70%);top:-100px;right:-100px;"></div>
-  <div class="geo-corner corner-tl"></div>
-  <div class="geo-corner corner-br"></div>
-
-  <div class="page-header-bar">
-    <div class="section-tag">Investimento</div>
-    <span class="page-num">04 / 06</span>
-  </div>
-
-  <div class="section-heading" style="position:relative;z-index:2;">
-    Nossas <strong class="gradient-text">Opções de Plano</strong>
-  </div>
-  <div class="heading-accent"></div>
-
-  <div class="plans-container">
-
-    <!-- Plano Base -->
-    <div class="plan-card base">
-      <div class="plan-inner">
-        <div class="plan-badge">Opção 01</div>
-        <div class="plan-name">Plano Geração<br>de Demanda</div>
-        <div class="plan-tagline">Ideal para imobiliárias que querem começar a gerar leads qualificados com agilidade.</div>
-        <div class="plan-price">
-          <div class="plan-price-label">Gestão mensal a partir de</div>
-          <div>
-            <span class="plan-price-value">R$ 2.497</span>
-            <span class="plan-price-period">/mês</span>
-          </div>
-        </div>
-        <div class="plan-items">
-          <div class="plan-item">Gestão de tráfego Meta Ads</div>
-          <div class="plan-item">Campanhas para imóveis prontos</div>
-          <div class="plan-item">Campanhas para lançamentos</div>
-          <div class="plan-item">Criação de criativos para anúncios</div>
-          <div class="plan-item">Captação direto no WhatsApp</div>
-          <div class="plan-item">Otimizações semanais das campanhas</div>
-          <div class="plan-item">Relatórios de desempenho</div>
-          <div class="plan-item">Reuniões estratégicas mensais</div>
-        </div>
-        <div class="plan-media">
-          <div class="plan-media-label">Investimento em mídia recomendado</div>
-          <div class="plan-media-value">R$ 3.000 – R$ 5.000/mês</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Plano Premium -->
-    <div class="plan-card premium">
-      <div class="plan-inner">
-        <div class="plan-badge">⭐ Opção 02 — Recomendado</div>
-        <div class="plan-name">Plano Operação<br>Completa de Crescimento</div>
-        <div class="plan-tagline">Para imobiliárias que querem escalar resultados com estratégia omnichannel e estrutura completa.</div>
-        <div class="plan-price">
-          <div class="plan-price-label">Gestão mensal a partir de</div>
-          <div>
-            <span class="plan-price-value">R$ 3.997</span>
-            <span class="plan-price-period">/mês</span>
-          </div>
-        </div>
-        <div class="plan-items">
-          <div class="plan-item">Meta Ads + Google Ads</div>
-          <div class="plan-item">Campanhas para imóveis prontos</div>
-          <div class="plan-item">Campanhas para lançamentos</div>
-          <div class="plan-item">Landing Pages para campanhas</div>
-          <div class="plan-item">Estratégias para alto padrão</div>
-          <div class="plan-item">Funis de captação completos</div>
-          <div class="plan-item">Relatórios completos e dashboards</div>
-          <div class="plan-item">Reuniões estratégicas quinzenais</div>
-          <div class="plan-item">Otimizações contínuas</div>
-        </div>
-        <div class="plan-media">
-          <div class="plan-media-label">Investimento em mídia recomendado</div>
-          <div class="plan-media-value">R$ 5.000 – R$ 10.000/mês</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-<!-- ════════════════════════════════════════
-     PAGE 5 — CONDIÇÕES E PAGAMENTO
-════════════════════════════════════════ -->
-<div class="page inner-page">
-  <div class="orb-bg" style="width:400px;height:400px;background:radial-gradient(circle,rgba(123,47,247,0.2),transparent 70%);bottom:-100px;right:-80px;"></div>
-  <div class="geo-corner corner-tl"></div>
-  <div class="geo-corner corner-br"></div>
-
-  <div class="page-header-bar">
-    <div class="section-tag">Condições Comerciais</div>
-    <span class="page-num">05 / 06</span>
-  </div>
-
-  <div class="section-heading" style="position:relative;z-index:2;">
-    Condições & <strong class="gradient-text">Formas de Pagamento</strong>
-  </div>
-  <div class="heading-accent"></div>
-
-  <table class="conditions-table">
-    <thead>
-      <tr>
-        <th>Período</th>
-        <th>Desconto</th>
-        <th>Plano Geração de Demanda</th>
-        <th>Plano Operação Completa</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Mensal</strong></td>
-        <td>—</td>
-        <td class="plan-a">R$ 2.497/mês</td>
-        <td class="plan-b"><span class="gold-val">R$ 3.997/mês</span></td>
-      </tr>
-      <tr>
-        <td><strong>Trimestral</strong></td>
-        <td><span class="discount-pill">10% off</span></td>
-        <td class="plan-a">R$ 2.247/mês</td>
-        <td class="plan-b"><span class="gold-val">R$ 3.597/mês</span></td>
-      </tr>
-      <tr>
-        <td><strong>Semestral</strong></td>
-        <td><span class="discount-pill">15% off</span></td>
-        <td class="plan-a">R$ 2.122/mês</td>
-        <td class="plan-b"><span class="gold-val">R$ 3.397/mês</span></td>
-      </tr>
-      <tr>
-        <td><strong>Anual</strong></td>
-        <td><span class="discount-pill gold-pill">25% off</span></td>
-        <td class="plan-a">R$ 1.873/mês</td>
-        <td class="plan-b"><span class="gold-val">R$ 2.998/mês</span></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div style="height:20px;"></div>
-
-  <div class="payment-grid">
-    <div class="payment-card">
-      <div class="payment-icon">⚡</div>
-      <div class="payment-name">PIX</div>
-      <div class="payment-desc">Pagamento imediato com confirmação na hora</div>
-    </div>
-    <div class="payment-card">
-      <div class="payment-icon">🏦</div>
-      <div class="payment-name">Transferência Bancária</div>
-      <div class="payment-desc">TED/DOC para qualquer banco, a seu critério</div>
-    </div>
-    <div class="payment-card">
-      <div class="payment-icon">💳</div>
-      <div class="payment-name">Cartão de Crédito</div>
-      <div class="payment-desc">Parcelamento em até 12x sem juros</div>
-    </div>
-  </div>
-
-  <div class="installment-banner">
-    <div class="installment-icon">🎁</div>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="paw p1" style="--r:-18deg"><svg><use href="#pawicon"/></svg></div>
+  <div class="paw p2" style="--r:12deg"><svg><use href="#pawicon"/></svg></div>
+  <div class="paw p3" style="--r:20deg"><svg><use href="#pawicon"/></svg></div>
+  <div class="paw p4" style="--r:-10deg"><svg><use href="#pawicon"/></svg></div>
+  <div class="wrap hero-inner">
     <div>
-      <div class="installment-text">Parcelamento em até 12x sem juros</div>
-      <div class="installment-sub">Disponível para contratos trimestrais, semestrais e anuais no cartão de crédito.</div>
-    </div>
-  </div>
-  <div class="obs-box">
-    <div class="obs-label">⚠ Observação Importante</div>
-    <div class="obs-text">
-      O investimento em anúncios é realizado <strong style="color:white;">diretamente pela Ruah Imobiliária</strong> junto às plataformas Meta e Google, garantindo <strong style="color:white;">total transparência e controle da verba de mídia</strong>. A MLX Mind é remunerada exclusivamente pela gestão estratégica das campanhas.
-    </div>
-  </div>
-</div>
-
-
-<!-- ════════════════════════════════════════
-     PAGE 6 — ENCERRAMENTO
-════════════════════════════════════════ -->
-<div class="page" id="encerramento" style="min-height:297mm; display:flex; flex-direction:column;">
-
-  <div class="orb orb-1 enc-orb-1"></div>
-  <div class="orb orb-2 enc-orb-2"></div>
-  <div class="geo-corner corner-tl"></div>
-  <div class="geo-corner corner-br"></div>
-
-  <div class="page-header-bar" style="padding:28px 44px 20px; border-bottom: 1px solid rgba(123,47,247,0.2); position:relative; z-index:2;">
-    <div class="logo-badge" aria-label="MLX Mind">
-      <div class="mlx-bars-logo" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
+      <span class="badge-pill reveal in"><span class="dot"></span> Aberto agora · 09h às 19h</span>
+      <h1 class="reveal in" data-d="1">Cuidado e comida boa <span class="hl">na porta<svg viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M2 8 C50 2 150 2 198 8" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/></svg></span> da sua casa</h1>
+      <p class="lead reveal in" data-d="2">O Auaufood é nutrição, banho, tosa e tudo que o seu pet precisa — com o carinho de sempre e delivery aqui em Ribeirão Preto.</p>
+      <div class="hero-actions reveal in" data-d="3">
+        <a href="https://wa.me/5516997744187?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Auaufood." target="_blank" rel="noopener" class="btn btn-primary"><i data-lucide="message-circle"></i> Fazer pedido</a>
+        <a href="#servicos" class="btn btn-ghost"><i data-lucide="paw-print"></i> Ver serviços</a>
+      </div>
+      <div class="trust reveal in" data-d="3">
+        <div class="trust-item"><i data-lucide="truck"></i> Delivery na sua casa</div>
+        <div class="trust-item"><i data-lucide="map-pin"></i> Ribeirão Preto</div>
+        <div class="trust-item"><i data-lucide="heart"></i> Feito com amor</div>
       </div>
     </div>
-    <span class="page-num">06 / 06</span>
-  </div>
-
-  <div class="enc-content">
-    <div class="enc-eyebrow">Próximo passo</div>
-
-    <div class="enc-headline">
-      Vamos construir uma operação <strong class="gradient-text">previsível</strong> de geração de oportunidades para sua equipe comercial.
-    </div>
-
-    <p class="enc-sub">
-      A Ruah Imobiliária merece uma estratégia digital à altura do seu padrão. Estamos prontos para começar.
-    </p>
-
-    <a class="enc-cta" href="https://www.mlxmind.com.br">Falar com a MLX Mind →</a>
-
-    <div class="enc-divider"></div>
-
-    <div class="enc-signature">
-      <div class="sig-name">Vinicius Castagine</div>
-      <div class="sig-title">CEO — MLX Mind</div>
-      <a class="sig-url" href="https://www.mlxmind.com.br">www.mlxmind.com.br</a>
-    </div>
-
-    <!-- Mini stats -->
-    <div style="display:flex;gap:32px;margin-top:44px;padding:20px 32px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;position:relative;z-index:2;">
-      <div class="stat-item">
-        <span class="stat-num" style="font-size:18px;">R$15M+</span>
-        <span class="stat-label">VGV gerado</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" style="font-size:18px;">120+</span>
-        <span class="stat-label">Projetos</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" style="font-size:18px;">R$14</span>
-        <span class="stat-label">Custo/lead</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" style="font-size:18px;">98%</span>
-        <span class="stat-label">Retenção</span>
+    <div class="hero-art reveal in" data-d="1">
+      <div class="pet-card">
+        <div class="deliver-tag"><i data-lucide="truck"></i> Entregamos!</div>
+        <img class="big-logo" src="https://res.cloudinary.com/dtdomrtyp/image/upload/v1782999288/82c75cd8-8ca7-448d-bdbc-4a431a75b18e_qum62u.png" alt="Logo Auaufood" style="object-fit:contain">
+        <h3>Auaufood</h3>
+        <p>Nutrição e delivery para o seu pet</p>
+        <div class="row">
+          <span class="chip"><i data-lucide="bath"></i> Banho</span>
+          <span class="chip"><i data-lucide="scissors"></i> Tosa</span>
+          <span class="chip"><i data-lucide="bone"></i> Ração</span>
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="enc-footer">
-    <span class="enc-footer-brand"><span>MLX Mind</span> | Marketing Imobiliário · Ruah Imobiliária</span>
-    <span class="enc-footer-copy">©️ 2026 MLX Mind. Todos os direitos reservados.</span>
+<!-- SERVIÇOS -->
+<section class="sec-pad" id="servicos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i data-lucide="paw-print"></i> O que oferecemos</span>
+      <h2>Tudo para o seu melhor amigo</h2>
+      <p>Do banho relaxante à ração na porta de casa — cuidamos do seu pet de ponta a ponta.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="svc-ico"><i data-lucide="bath"></i></div><h3>Banho</h3><p>Seu pet limpinho, cheiroso e feliz, com produtos que cuidam da pele e do pelo.</p></div>
+      <div class="svc reveal" data-d="1"><div class="svc-ico"><i data-lucide="scissors"></i></div><h3>Tosa</h3><p>Tosa higiênica ou na tesoura, do jeitinho que combina com o seu pet.</p></div>
+      <div class="svc reveal" data-d="2"><div class="svc-ico"><i data-lucide="bone"></i></div><h3>Produtos</h3><p>Ração, petiscos, brinquedos e acessórios das melhores marcas.</p></div>
+      <div class="svc reveal" data-d="3"><div class="svc-ico"><i data-lucide="truck"></i></div><h3>Delivery</h3><p>Pediu, chegou. Entregamos tudo direto na porta da sua casa.</p></div>
+    </div>
   </div>
-</div>
+</section>
 
+<!-- COMO FUNCIONA -->
+<section class="sec-pad" id="como">
+  <div class="wrap">
+    <div class="how sec-pad">
+      <div class="paw-bg" aria-hidden="true">
+        <svg style="top:-20px;left:-20px"><use href="#pawicon"/></svg>
+        <svg style="bottom:10px;right:30px;transform:rotate(25deg)"><use href="#pawicon"/></svg>
+        <svg style="top:40%;right:-30px"><use href="#pawicon"/></svg>
+      </div>
+      <div class="wrap" style="padding:0">
+        <div class="sec-head reveal">
+          <span class="eyebrow"><i data-lucide="sparkles"></i> Simples assim</span>
+          <h2>Peça em 3 passos</h2>
+          <p>Sem complicação: é só chamar no WhatsApp que a gente cuida do resto.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><div class="num">01</div><div class="step-ico"><i data-lucide="list"></i></div><h3>Escolha</h3><p>Diz o que o seu pet precisa: banho, tosa, ração ou aquele petisco favorito.</p></div>
+          <div class="step reveal" data-d="1"><div class="num">02</div><div class="step-ico"><i data-lucide="message-circle"></i></div><h3>Peça no WhatsApp</h3><p>Manda a mensagem pra gente. Confirmamos tudo rapidinho com você.</p></div>
+          <div class="step reveal" data-d="2"><div class="num">03</div><div class="step-ico"><i data-lucide="home"></i></div><h3>Receba em casa</h3><p>Seu pedido chega na porta ou agendamos o serviço no melhor horário.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE -->
+<section class="sec-pad" id="porque">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i data-lucide="heart"></i> Por que o Auaufood</span>
+      <h2>Feito por quem ama pet</h2>
+    </div>
+    <div class="feats-grid">
+      <div class="feat reveal">
+        <div class="feat-ico"><i data-lucide="truck"></i></div>
+        <div><h3>Delivery de verdade</h3><p>Comodidade total: você resolve tudo sem sair de casa, aqui em Ribeirão Preto.</p></div>
+      </div>
+      <div class="feat reveal" data-d="1">
+        <div class="feat-ico"><i data-lucide="shield-check"></i></div>
+        <div><h3>Produtos de confiança</h3><p>Trabalhamos com marcas de qualidade que cuidam bem da saúde do seu pet.</p></div>
+      </div>
+      <div class="feat reveal" data-d="2">
+        <div class="feat-ico"><i data-lucide="smile"></i></div>
+        <div><h3>Atendimento carinhoso</h3><p>Cada pet é tratado como se fosse da família. Zelo e carinho em cada detalhe.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section class="sec-pad" id="local">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><i data-lucide="map-pin"></i> Onde estamos</span>
+      <h2>Venha nos visitar</h2>
+    </div>
+    <div class="local-grid reveal" data-d="1">
+      <div class="local-info">
+        <h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem)">Auaufood Pet Shop</h2>
+        <div class="info-row">
+          <div class="ic"><i data-lucide="map-pin"></i></div>
+          <div><div class="lbl">Endereço</div><a class="val" href="https://maps.google.com/maps?q=R.+Niter%C3%B3i+743+Jardim+Castelo+Branco+Ribeir%C3%A3o+Preto" target="_blank" rel="noopener">R. Niterói, 743 — Jd. Castelo Branco<br>Ribeirão Preto — SP · 14090-710</a></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><i data-lucide="clock"></i></div>
+          <div><div class="lbl">Horário</div><div class="val">Todos os dias · 09h às 19h</div></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><i data-lucide="phone"></i></div>
+          <div><div class="lbl">WhatsApp</div><a class="val" href="https://wa.me/5516997744187" target="_blank" rel="noopener">(16) 99774-4187</a></div>
+        </div>
+        <a href="https://maps.google.com/maps?q=R.+Niter%C3%B3i+743+Jardim+Castelo+Branco+Ribeir%C3%A3o+Preto" target="_blank" rel="noopener" class="btn btn-teal"><i data-lucide="navigation"></i> Como chegar</a>
+      </div>
+      <div class="map-wrap">
+        <iframe title="Mapa Auaufood" src="https://maps.google.com/maps?q=R.%20Niter%C3%B3i%2C%20743%2C%20Jardim%20Castelo%20Branco%2C%20Ribeir%C3%A3o%20Preto%20-%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec-pad" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta reveal">
+      <div class="paw-bg" aria-hidden="true">
+        <svg style="width:90px;height:90px;top:-10px;left:20px"><use href="#pawicon"/></svg>
+        <svg style="width:70px;height:70px;bottom:-6px;right:40px;transform:rotate(20deg)"><use href="#pawicon"/></svg>
+        <svg style="width:60px;height:60px;top:30%;right:12%"><use href="#pawicon"/></svg>
+      </div>
+      <h2>Seu pet merece o melhor</h2>
+      <p>Faça seu pedido agora pelo WhatsApp e receba tudo com todo o carinho do Auaufood.</p>
+      <a href="https://wa.me/5516997744187?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20no%20Auaufood." target="_blank" rel="noopener" class="btn btn-primary"><i data-lucide="message-circle"></i> Pedir pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <a href="#top" class="foot-brand"><img class="logo-badge" style="width:52px;height:52px" src="https://res.cloudinary.com/dtdomrtyp/image/upload/v1782999288/82c75cd8-8ca7-448d-bdbc-4a431a75b18e_qum62u.png" alt="Auaufood"><div><b>Auau<span>food</span></b><div style="font-size:.85rem;color:rgba(253,244,231,.7)">Nutrição e delivery para seu pet</div></div></a>
+      <div class="foot-social">
+        <a href="https://instagram.com/auaufood" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="https://wa.me/5516997744187" target="_blank" rel="noopener" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+        <a href="https://maps.google.com/maps?q=R.+Niter%C3%B3i+743+Ribeir%C3%A3o+Preto" target="_blank" rel="noopener" aria-label="Mapa"><i data-lucide="map-pin"></i></a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Auaufood. Todos os direitos reservados.</span>
+      <span>Feito com carinho por <a href="https://instagram.com/mlxmind" target="_blank" rel="noopener">MLX Mind</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5516997744187?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Auaufood." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><i data-lucide="message-circle"></i></a>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+  lucide.createIcons();
+  const header=document.getElementById('header');
+  const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>30);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const mm=document.getElementById('mmenu');
+  document.getElementById('menuBtn').addEventListener('click',()=>mm.classList.add('open'));
+  document.getElementById('menuClose').addEventListener('click',()=>mm.classList.remove('open'));
+  mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
